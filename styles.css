@@ -1,0 +1,295 @@
+/* SEE defaults.css TO SEE DEFINED DEFAULT VALUES */
+
+/* FONTS */
+@font-face {
+  font-family: "OpenSans";
+  src: url(./fonts/OpenSans-Regular.ttf);
+}
+
+/* font-family: 'Lato', sans-serif; */
+
+/* VARIABLES */
+:root {
+  --color0: #ffffff;
+  --color1: #e8f1f5;
+  --color2: #005691;
+  --color3: #004a7c;
+
+  --top-bar-height: 10vh;
+  --banner-height: 80vh;
+  --page-links-height: 10vh;
+}
+
+@media screen and (max-width: 992px) {
+}
+
+/* TAGS */
+main {
+  margin-top: var(--top-bar-height);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+h2 {
+  text-align: center;
+  padding: 5vh;
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* CLASSES + IDs */
+
+#top-bar {
+  position: fixed;
+  top: 0;
+  height: var(--top-bar-height);
+  background-color: var(--color0);
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-bottom: 2px solid black;
+  z-index: 10;
+}
+
+#top-bar > img {
+  max-height: 100%;
+}
+
+#hamburger {
+}
+
+/* Image */
+#banner-container {
+  /* height: 80vh; */
+  height: var(--banner-height);
+  position: relative;
+}
+
+#banner-text {
+  bottom: 0;
+  color: var(--color0);
+  font-size: 4rem;
+  font-weight: 500;
+  position: absolute;
+  z-index: 5;
+  max-width: 60vw;
+  line-height: 1.2;
+  padding: 20px;
+}
+
+#gradient-img {
+  height: 100%;
+  position: relative;
+}
+
+#gradient-img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(196, 196, 196, 0), rgba(0, 0, 0, 0.75));
+}
+
+#gradient-img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#banner-text {
+  position: absolute;
+}
+
+#content-area {
+  padding: 0 10vw 15vh 10vw;
+}
+
+/* page links */
+
+#page-links {
+  display: flex;
+  width: 100%;
+}
+
+#page-links > div {
+  height: var(--page-links-height);
+  flex-grow: 1;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#page-links > div:hover {
+  background-color: var(--color1);
+}
+
+#page-links img {
+  max-height: 5vh;
+  padding: 5px 10px;
+  transition: padding 0.5s;
+}
+
+#page-links > div:hover img {
+  padding-left: 15px;
+  padding-right: 5px;
+}
+
+#maps-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+
+#address-block p {
+  text-align: center;
+}
+
+#awards-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5vh;
+}
+
+#awards-box img {
+  max-height: 40vh;
+}
+
+#quotes-flex {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10vw;
+}
+
+#quotes-flex p {
+  flex-shrink: 1;
+  max-width: 75%;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+footer {
+  background-color: var(--color3);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer * {
+  color: var(--color0);
+}
+
+footer div {
+  padding: 30px;
+}
+
+#footer-left > h1 {
+  font-size: 3rem;
+}
+
+#footer-right {
+  text-align: right;
+  text-decoration: underline;
+}
+
+/* Small devices */
+@media screen and (max-width: 600px) {
+  :root {
+    --top-bar-height: 5vh;
+    --banner-height: 40vh;
+    --page-links-height: 5vh;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  #banner-text {
+    font-size: 1.25rem;
+    max-width: 80vw;
+  }
+
+  #content-area {
+    padding: 0 10vw 5vh 10vw;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  #quotes-flex {
+    gap: 4vw;
+  }
+
+  #quotes-flex p {
+    max-width: 100%;
+    font-size: 1.75rem !important;
+    /* background-color: red; */
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+
+  #footer-left > h1 {
+    font-size: 1.75rem;
+  }
+
+  #footer-right {
+    text-align: left;
+  }
+  footer > div {
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+/* Medium devices */
+@media screen and (max-width: 768px) {
+  .mapouter {
+    height: 300px !important;
+    width: 300px !important;
+  }
+
+  .gmap_canvas {
+    height: 300px !important;
+    width: 300px !important;
+  }
+  
+}
+
+/* Large devices */
+@media screen and (max-width: 992px) {
+  #quotes-flex p {
+    font-size: 2.5rem !important;
+  }
+
+  #page-links {
+    flex-wrap: wrap;
+  }
+
+  #maps-flex {
+    flex-wrap: wrap;
+  }
+
+  #quotes-flex {
+    flex-wrap: wrap;
+  }
+}
